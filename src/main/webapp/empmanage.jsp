@@ -7,8 +7,8 @@
 <body>
 <div align="center">
     <form action="#" method="post">
-        姓名:<input id="ename"><br>
-        工资:<input id="salary"><br>
+        姓名:<input name="ename"><br>
+        工资:<input name="salary"><br>
         <button>高级搜索</button>
     </form><br>
     <a href="/toAddEmp">添加员工</a><br><br>
