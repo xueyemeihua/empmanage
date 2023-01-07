@@ -6,9 +6,9 @@
 </head>
 <body>
 <div align="center">
-    <form action="#" method="post">
-        姓名:<input id="ename"><br>
-        工资:<input id="salary"><br>
+    <form action="/advsearch" method="post">
+        姓名:<input name="ename"><br>
+        工资:<input name="salary"><br>
         <button>高级搜索</button>
     </form><br>
     <a href="/toAddEmp">添加员工</a><br><br>
@@ -23,6 +23,7 @@
             <th>入职时间</th>
             <th>部门编号</th>
             <th>部门名称</th>
+            <th>部门地址</th>
             <th>操作</th>
         </tr>
         <c:forEach var="emp" items="${emps}">
@@ -36,6 +37,7 @@
                 <td>${emp.hiredate}</td>
                 <td>${emp.deptno}</td>
                 <td>${emp.dept.dname}</td>
+                <td>${emp.dept.dlocation}</td>
                 <td>
                     <a href="#">修改</a>
                     <a href="#">删除</a>

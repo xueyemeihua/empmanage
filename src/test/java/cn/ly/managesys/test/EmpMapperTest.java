@@ -11,20 +11,13 @@ public class EmpMapperTest {
 
     EmpMapper mapper = SqlSessionUtil.getSqlSession().getMapper(EmpMapper.class);
     @Test
-    public void TestGetAllEmp() {
+    public void TestGetEmp() {
         List<Emp> allEmp = mapper.getAllEmp();
         allEmp.forEach(emp -> {
             System.out.println(emp);
         });
     }
 
-    @Test
-    public void TestGetAllEmpAndDept() {
-        List<Emp> allEmp = mapper.getAllEmpAndDept();
-        allEmp.forEach(emp -> {
-            System.out.println(emp);
-        });
-    }
 
 
 }

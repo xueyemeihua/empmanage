@@ -33,4 +33,19 @@
         insert into emp (ename,job,salary,bonus,deptno) values (#{emp.ename},#{emp.job},#{emp.salary},#{emp.bonus},#{emp.deptno})
     </insert>
 
+<!--    List<Emp> getEmpByLessThanSalary(@Param("salary") int salary);-->
+    <select id="getEmpByLessThanSalary" resultMap="empDept">
+        select * from emp where salary &lt;=#{salary};
+    </select>
+
+<!--    List<Emp> getEmpByEnameLike(@Param("ename") String ename);-->
+    <select id="getEmpByEnameLike" resultMap="empDept">
+        select * from emp where ename like "%"#{ename}"%";
+    </select>
+
+<!--List<Emp> getEmpByEnameLikeAndLessThanSalary(@Param("ename") String ename, @Param("salary") int salary);-->
+    <select id="getEmpByEnameLikeAndLessThanSalary" resultMap="empDept">
+        select * from emp where salary &lt;=#{salary} and ename like "%"#{ename}"%";
+    </select>
+
 </mapper>

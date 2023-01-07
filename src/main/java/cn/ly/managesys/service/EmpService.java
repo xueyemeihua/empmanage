@@ -21,4 +21,19 @@ public class EmpService {
         int i = mapper.insertEmp(emp);
         return i;
     }
+
+    public List<Emp> getEmpByLessThanSalary(int salary) {
+        List<Emp> emps = mapper.getEmpByLessThanSalary(salary);
+        return emps;
+    }
+
+    public List<Emp> getEmpByEnameLike(String ename) {
+        List<Emp> emps = mapper.getEmpByEnameLike(ename);
+        return emps;
+    }
+
+    public List<Emp> getEmpByEnameLikeAndLessThanSalary(String ename, int salary) {
+        List<Emp> emps = mapper.getEmpByEnameLikeAndLessThanSalary(ename,salary);
+        return emps;
+    }
 }

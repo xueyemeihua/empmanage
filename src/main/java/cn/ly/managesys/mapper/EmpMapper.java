@@ -15,4 +15,13 @@ public interface EmpMapper {
 
 //    新增员工
     int insertEmp(@Param("emp") Emp emp);
+
+//    查询少于此工资的员工信息和部门信息
+    List<Emp> getEmpByLessThanSalary(@Param("salary") int salary);
+
+//    根据姓名模糊查询员工信息和部门信息
+    List<Emp> getEmpByEnameLike(@Param("ename") String ename);
+
+//    根据模糊姓名和工资查询员工和部门信息
+    List<Emp> getEmpByEnameLikeAndLessThanSalary(@Param("ename") String ename, @Param("salary") int salary);
 }
