@@ -9,16 +9,22 @@ public class Emp {
     private Integer bonus;
     private String hiredate;
     private Integer deptno;
+    private Dept dept;
 
-    public Emp(Integer empno, String ename, String job, Integer salary, Integer mgr, Integer bonus, String hiredate, Integer deptno) {
-        this.empno = empno;
+    public Emp(String ename, String job, Integer salary, Integer bonus, Integer deptno) {
         this.ename = ename;
         this.job = job;
         this.salary = salary;
-        this.mgr = mgr;
         this.bonus = bonus;
-        this.hiredate = hiredate;
         this.deptno = deptno;
+    }
+
+    public Dept getDept() {
+        return dept;
+    }
+
+    public void setDept(Dept dept) {
+        this.dept = dept;
     }
 
     @Override
@@ -32,7 +38,19 @@ public class Emp {
                 ", bonus=" + bonus +
                 ", hiredate='" + hiredate + '\'' +
                 ", deptno=" + deptno +
+                ", dept=" + dept +
                 '}';
+    }
+
+    public Emp(Integer empno, String ename, String job, Integer salary, Integer mgr, Integer bonus, String hiredate, Integer deptno) {
+        this.empno = empno;
+        this.ename = ename;
+        this.job = job;
+        this.salary = salary;
+        this.mgr = mgr;
+        this.bonus = bonus;
+        this.hiredate = hiredate;
+        this.deptno = deptno;
     }
 
     public Integer getEmpno() {

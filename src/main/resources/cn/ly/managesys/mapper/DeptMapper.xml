@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.ly.managesys.mapper.DeptMapper">
+
+<!--    Dept getDeptByDeptno(@Param("deptno") Integer deptno);-->
+    <select id="getDeptByDeptno" resultType="dept">
+        select * from dept where deptno=#{deptno}
+    </select>
+
+<!--    List<Emp> getAllDept();-->
+    <select id="getAllDept" resultType="dept">
+        select * from dept
+    </select>
+
+
+</mapper>

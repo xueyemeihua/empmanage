@@ -3,4 +3,28 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
+    <servlet>
+        <servlet-name>ToempmanageServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.ToempmanageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ToAddEmpServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.ToAddEmpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddEmpServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.AddEmpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddEmpServlet</servlet-name>
+        <url-pattern>/addEmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ToAddEmpServlet</servlet-name>
+        <url-pattern>/toAddEmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ToempmanageServlet</servlet-name>
+        <url-pattern>/toempmanage</url-pattern>
+    </servlet-mapping>
 </web-app>
