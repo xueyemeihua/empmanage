@@ -19,6 +19,22 @@
         <servlet-name>AdvsearchServlet</servlet-name>
         <servlet-class>cn.ly.managesys.controller.AdvsearchServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ToUpdateEmpServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.ToUpdateEmpServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateEmpServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.UpdateEmpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateEmpServlet</servlet-name>
+        <url-pattern>/updateEmp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ToUpdateEmpServlet</servlet-name>
+        <url-pattern>/toUpdateEmp</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>AdvsearchServlet</servlet-name>
         <url-pattern>/advsearch</url-pattern>

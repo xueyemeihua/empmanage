@@ -24,18 +24,30 @@ public class AdvsearchServlet extends HttpServlet {
         if (ename=="" && salary_=="") {
             //查询所有
             emps = service.getAllEmpAndDept();
+            if (emps.size()==0){
+                request.setAttribute("advsError","没有数据");
+            }
         } else {
             if (ename=="") {
                 //根据工资查
                 int salary = Integer.parseInt(salary_);
                 emps = service.getEmpByLessThanSalary(salary);
+                if (emps.size()==0){
+                    request.setAttribute("advsError","没有数据");
+                }
             } else if (salary_==""){
                 //根据姓名查
                 emps = service.getEmpByEnameLike(ename);
+                if (emps.size()==0){
+                    request.setAttribute("advsError","没有数据");
+                }
             } else {
                 //双条件查询
                 int salary = Integer.parseInt(salary_);
                 emps = service.getEmpByEnameLikeAndLessThanSalary(ename,salary);
+                if (emps.size()==0){
+                    request.setAttribute("advsError","没有数据");
+                }
             }
         }
         request.setAttribute("emps",emps);

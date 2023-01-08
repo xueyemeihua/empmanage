@@ -8,18 +8,29 @@ import org.apache.ibatis.session.SqlSession;
 import java.util.List;
 
 public class EmpService {
+
     SqlSession sqlSession = SqlSessionUtil.getSqlSession();
     EmpMapper mapper = sqlSession.getMapper(EmpMapper.class);
 
+    public int insertEmp(Emp emp) {
+        int i = mapper.insertEmp(emp);
+        if (i==1){
+            sqlSession.commit();
+        }
+        return i;
+    }
+
+    public int updateEmp(Emp emp) {
+        int i = mapper.updateEmp(emp);
+        if (i==1){
+            sqlSession.commit();
+        }
+        return i;
+    }
 
     public List<Emp> getAllEmpAndDept() {
         List<Emp> emps = mapper.getAllEmpAndDept();
         return emps;
-    }
-
-    public int insertEmp(Emp emp) {
-        int i = mapper.insertEmp(emp);
-        return i;
     }
 
     public List<Emp> getEmpByLessThanSalary(int salary) {
@@ -36,4 +47,11 @@ public class EmpService {
         List<Emp> emps = mapper.getEmpByEnameLikeAndLessThanSalary(ename,salary);
         return emps;
     }
+
+    public Emp getEmpByEmpno(int empno) {
+        Emp emp = mapper.getEmpByEmpno(empno);
+        return emp;
+    }
+
+
 }

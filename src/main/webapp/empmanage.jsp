@@ -39,12 +39,13 @@
                 <td>${emp.dept.dname}</td>
                 <td>${emp.dept.dlocation}</td>
                 <td>
-                    <a href="#">修改</a>
+                    <a href="/toUpdateEmp?empno=${emp.empno}" methods="post">修改</a>
                     <a href="#">删除</a>
                 </td>
             </tr>
         </c:forEach>
     </table>
+    <p style="color: red">${advsError}</p>
 </div>
 </body>
 </html>

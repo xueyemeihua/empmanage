@@ -48,4 +48,14 @@
         select * from emp where salary &lt;=#{salary} and ename like "%"#{ename}"%";
     </select>
 
+<!--    Emp getEmpByEmpno(@Param("empno") int empno);-->
+    <select id="getEmpByEmpno" resultMap="empDept">
+        select * from emp where empno=#{empno};
+    </select>
+
+<!--    int updateEmp(@Param("emp") Emp emp);-->
+    <update id="updateEmp">
+        update emp set job=#{emp.job},salary=#{emp.salary},bonus=#{emp.bonus},deptno=#{emp.deptno} where empno=#{emp.empno};
+    </update>
+
 </mapper>

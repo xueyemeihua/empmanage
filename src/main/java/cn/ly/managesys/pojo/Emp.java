@@ -19,6 +19,14 @@ public class Emp {
         this.deptno = deptno;
     }
 
+    public Emp(Integer empno, String job, Integer salary, Integer bonus, Integer deptno) {
+        this.empno = empno;
+        this.job = job;
+        this.salary = salary;
+        this.bonus = bonus;
+        this.deptno = deptno;
+    }
+
     public Dept getDept() {
         return dept;
     }

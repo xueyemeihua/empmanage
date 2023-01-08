@@ -24,4 +24,10 @@ public interface EmpMapper {
 
 //    根据模糊姓名和工资查询员工和部门信息
     List<Emp> getEmpByEnameLikeAndLessThanSalary(@Param("ename") String ename, @Param("salary") int salary);
+
+//    根据编号查员工信息和部门信息
+    Emp getEmpByEmpno(@Param("empno") int empno);
+
+//    修改员工信息
+    int updateEmp(@Param("emp") Emp emp);
 }
