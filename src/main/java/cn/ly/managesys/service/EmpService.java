@@ -54,4 +54,11 @@ public class EmpService {
     }
 
 
+    public int deleteEmpByEmpno(int empno) {
+        int i = mapper.deleteEmpByEmpno(empno);
+        if (i == 1) {
+            sqlSession.commit();
+        }
+        return i;
+    }
 }

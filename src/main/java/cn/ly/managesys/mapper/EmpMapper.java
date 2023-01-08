@@ -30,4 +30,7 @@ public interface EmpMapper {
 
 //    修改员工信息
     int updateEmp(@Param("emp") Emp emp);
+
+//    根据员工编号删除员工
+    int deleteEmpByEmpno(@Param("empno") int empno);
 }

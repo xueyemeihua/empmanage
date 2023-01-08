@@ -3,6 +3,7 @@
 <html>
 <head>
     <title>员工管理</title>
+    <script src="js/jquery-1.12.4.js"></script>
 </head>
 <body>
 <div align="center">
@@ -40,12 +41,24 @@
                 <td>${emp.dept.dlocation}</td>
                 <td>
                     <a href="/toUpdateEmp?empno=${emp.empno}" methods="post">修改</a>
-                    <a href="#">删除</a>
+                    <a href="javascript:void (0)" onclick="deleteEmp(${emp.empno})">删除</a>
                 </td>
             </tr>
         </c:forEach>
     </table>
     <p style="color: red">${advsError}</p>
+    <p style="color: red">${deleteError}</p>
+
 </div>
+
+<script>
+    function deleteEmp(empno) {
+        var b = confirm("真的要删除编号为"+empno+"的员工吗?");
+        if (b) {
+            window.location="/deleteEmp?empno="+empno;
+        }
+    }
+</script>
+
 </body>
 </html>

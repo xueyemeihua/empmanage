@@ -27,6 +27,14 @@
         <servlet-name>UpdateEmpServlet</servlet-name>
         <servlet-class>cn.ly.managesys.controller.UpdateEmpServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteEmpServlet</servlet-name>
+        <servlet-class>cn.ly.managesys.controller.DeleteEmpServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteEmpServlet</servlet-name>
+        <url-pattern>/deleteEmp</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>UpdateEmpServlet</servlet-name>
         <url-pattern>/updateEmp</url-pattern>

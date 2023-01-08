@@ -30,6 +30,10 @@ public class EmpMapperTest {
         int i = mapper.updateEmp(emp);
     }
 
+    @Test
+    public void TestDeleteEmp() {
+        int i = mapper.deleteEmpByEmpno(17);
+    }
 
 
 }
